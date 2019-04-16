@@ -1,13 +1,15 @@
-# dao
-db data object
-just mongo now, maybe other db later
+export interface Mongoconfig {
+    "url": string,
+    "account": {
+        "user": string,
+        "pass": string,
+        "auth": {
+            "authdb": string
+        }
+    }
+}
 
-#Depend on 
-* [tools-util](https://github.com/Ray-Sun/tools-util)
 
-#DB config
-mongo-config.ts
-```javascript
 export const MONGO_CONFIGURATION: Mongoconfig = {
     "url": "mongodb://127.0.0.1:27001/bargain",
     "account": {
@@ -18,4 +20,3 @@ export const MONGO_CONFIGURATION: Mongoconfig = {
         }
     }
 };
-```
